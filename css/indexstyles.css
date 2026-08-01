@@ -200,28 +200,58 @@ body {
 		align-items: flex-start;
 		gap: 18px;
 	}
-	.site-nav {
-		flex-wrap: wrap;
-		gap: 16px;
-	}
 	.hero h1 {
-		font-size: 2.6rem;
+		font-size: 2.4rem;
 	}
-	.partners {
-		padding: 20px 0;
+	.hero p {
+		font-size: 0.98rem;
+	}
+	.hero-media {
+		min-height: 280px;
+	}
+	.feature {
+		padding: 28px 24px;
 	}
 	.partner-list {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
+	.hero h1 {
+		font-size: 2rem;
+	}
 	.hero p,
 	.feature-copy p {
 		font-size: 0.95rem;
 	}
+	.feature {
+		padding: 24px 20px;
+		border-radius: 24px;
+	}
 	.partner-list {
 		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+}
+
+@media (max-width: 420px) {
+	#page {
+		padding: 16px 12px 24px;
+	}
+	.hero {
+		gap: 20px;
+	}
+	.hero h1 {
+		font-size: 1.75rem;
+	}
+	.hero p {
+		font-size: 0.92rem;
+	}
+	.feature-graphic {
+		height: 120px;
+		width: 120px;
+		font-size: 2.6rem;
 	}
 }
 

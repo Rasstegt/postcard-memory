@@ -1,10 +1,8 @@
 @media only screen and (max-width: 540px) {
-  body { font-size: 16px; }
+  body { font-size: 15px; }
 
-  #wrapper { margin: 12px; padding: 0 8px 24px; }
+  #page { padding: 16px 12px 24px; }
 
-  /* Ensure panels stack cleanly on small phones */
-  #main { grid-template-columns: 1fr; gap: 12px; }
-
-  #header h1 { font-size: 1.6rem; }
+  .hero-media { min-height: 260px; }
+  .partner-list { grid-template-columns: 1fr; gap: 14px; }
 }
