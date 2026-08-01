@@ -5,6 +5,12 @@ html, body {
 	font-family: 'Open Sans', Arial, sans-serif;
 	background: #f4f5f7;
 	color: #1e1e2f;
+.brand-info {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
 }
 
 body {
@@ -23,17 +29,19 @@ body {
 	align-items: center;
 	justify-content: center; /* center header since nav was removed */
 	padding: 24px 0;
-}
-
-.brand {
-	display: flex;
+	font-family: 'Playfair Display', serif;
+	font-size: 2.4rem;
+	font-weight: 700;
+	color: #1e1e2f;
+	text-align: left;
+	display:inline-flex;
 	align-items: center;
 	gap: 12px;
 }
 
 .brand-mark {
-	width: 46px;
-	height: 46px;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
 	background: #ffd0a8;
 	display: grid;
@@ -43,7 +51,7 @@ body {
 
 .brand-label {
 	text-transform: uppercase;
-	font-size: 0.8rem;
+	font-size: 1.5rem;
 	letter-spacing: 0.2em;
 	color: #ee6f1d;
 }
@@ -51,9 +59,7 @@ body {
 .brand-name {
 	font-family: 'Playfair Display', serif;
 	font-size: 1.5rem;
-	font-weight: 700;
 	color: #1e1e2f;
-	text-align: center;
 }
 
 .hero {
@@ -145,24 +151,13 @@ body {
 
 .feature-copy h2 {
 	font-family: 'Playfair Display', serif;
-	font-size: clamp(2rem, 3.2vw, 2.8rem);
-	line-height: 1.02;
-	margin: 0;
-	color: #1e1e2f;
-}
-
-/* Make the feature heading and paragraph visually one block */
-.feature-copy p {
-	font-family: 'Playfair Display', serif;
-	font-size: clamp(2rem, 3.2vw, 2.8rem);
-	line-height: 1.02;
-	margin: 0.25rem 0 0 0;
+	font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+	line-height: 1.03;
+	margin: 0 0 18px;
 	color: #1e1e2f;
 }
 
 .feature-copy p {
-	margin: 0;
-	line-height: 1.85;
 	color: #5f5f74;
 }
 
