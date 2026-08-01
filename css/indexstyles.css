@@ -55,19 +55,6 @@ body {
 	color: #1e1e2f;
 }
 
-.site-nav {
-	display: flex;
-	gap: 28px;
-	font-size: 0.95rem;
-	font-weight: 600;
-	color: #4b4b63;
-}
-
-.site-nav a {
-	text-decoration: none;
-	color: inherit;
-}
-
 .hero {
 	display: grid;
 	grid-template-columns: 1.25fr 1fr;
