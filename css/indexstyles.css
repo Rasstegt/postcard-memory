@@ -1,46 +1,98 @@
+	/* Basic page */
+	html, body {
+		height: 100%;
+	}
 	body {
-	background-color: #cde4ef;
+		margin: 0;
+		font-family: 'Open Sans', Arial, sans-serif;
+		background-color: #dff2f8;
+		color: #333;
 	}
 
 	#wrapper {
-	margin: 1% 0% 25% 25%;
-	background-color: #f00000;
-	width: 50%;
-	background-image: url(../images/wrapper.gif);
-	background-position: center;
-	background-size: cover;
-	border-color: #8f2626;
-	border: 2px solid;
+		max-width: 1100px;
+		margin: 24px auto;
+		padding: 0 16px 32px;
 	}
 
+	/* Header */
 	#header {
-	padding: 3% 0 2% 10%;
-	height: 100%;
+		background: #ffffff;
+		border: 3px solid #0b2340;
+		padding: 18px 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+	#header h1 {
+		margin: 0;
+		font-family: 'Playfair Display', serif;
+		font-weight: 700;
+		color: #0b2340;
+		font-size: 3rem;
+		text-align: center;
+	}
+	#header #header-email {
+		position: absolute;
+		right: 18px;
+		top: 18px;
+		color: #0b2340;
+		font-size: 1.4rem;
 	}
 
-	#lists {
-	padding: 3% 0% 0% 8%;
-	border-color: #8f2626;
-	border-top: 2px solid;
+	/* Main 3-column layout */
+	#main {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		gap: 18px;
+		margin-top: 18px;
+	}
+	.panel {
+		background: #ffffff;
+		border: 3px solid #0b2340;
+		padding: 22px;
+		box-sizing: border-box;
+		min-height: 320px;
 	}
 
-	#subtitle {
-	padding-left: 8%;
+	#left h2, #right h2, #center h2 {
+		margin-top: 0;
+		font-family: 'Playfair Display', serif;
+		color: #0b2340;
 	}
 
-	#contactme {
-	margin: 1% 0 0 5%;
+	/* Center maintenance panel with GIF background */
+	#center.maintenance {
+		background-image: url('../images/maintenance.gif');
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.maintenance-inner {
+		background: rgba(0,0,0,0.45);
+		padding: 24px 32px;
+		text-align: center;
+		border-radius: 4px;
+	}
+	.maintenance-inner h2 {
+		margin: 0 0 8px 0;
+		font-size: 1.8rem;
+		color: #fff;
+	}
+	.maintenance-inner p { margin: 0; color: #f6f6f6; }
+
+	/* Links and text */
+	a { color: #0b2340; }
+
+	/* Responsive: stack columns on small screens */
+	@media (max-width: 900px) {
+		#header h1 { font-size: 2rem; }
+		#main { grid-template-columns: 1fr; }
+		.panel { min-height: 220px; }
 	}
 
-	h1, h2, i {
-	color: #04256d;
-	font-family: Cambria;
-	margin: 0%;} 
-
-	p, h3, a, li {
-	color: #730f06;
-	font-family: Cambria;}
-
-	li {
-		margin-top: 3px;
-	}

@@ -1,55 +1,49 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Postcard Memories</title> 
+		<title>Postcard Memories</title>
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/indexstyles.css">
 		<link rel="stylesheet" href="css/indexmedia.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link href="images/icon.ico" rel="shortcut icon" type="image/x-icon">	
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130483435-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-130483435-1');
-    </script>
-
 		
 	</head>
 
 <body>
 
 <div id="wrapper">
-	<div id="header">
+	<header id="header">
 		<h1>Hawaii Postcard Memories</h1>
-		<div id="contactme">
-		<h2>
-			<a href="mailto:kate@postcardmemory.com" target="_blank"> <i class="far fa-envelope fa-1x"></i></a>
-		<!--	<a href="" target="_blank"><i class="fab fa-linkedin fa-1x"></i></a>
-			<a href=""><i class="fab fa-github-square"></i></a> -->
-		</h2> 
-	</div>
-	</div>
+		<a id="header-email" href="mailto:kate@postcardmemory.com" aria-label="Email us"><i class="far fa-envelope"></i></a>
+	</header>
 
-		<div id="lists">
-			<h2>About Us | Our Story</h2>
-	<p> 
-	<ul>
-		<!-- <li><a href="projects/quiz/" target="_blank">Quiz | JS</a></li>
-		<li><a href="projects/database/" target="_blank">Order | MySQL | PHP</a></li>
-		<li><a href="wireframes/wireframes.html" target="_blank">Rush Wallet | Wireframes</a></li>
-	-->
-		
-	</ul>
-	</p>
-		</div>
+	<main id="main">
+		<aside id="left" class="panel">
+			<h2>About Us</h2>
+			<p>
+				We are a small family business that has been in operation since 2010. We specialize in creating unique and personalized postcards that capture the beauty and essence of Hawaii. Our postcards are perfect for sending to loved ones or keeping as a memento of your trip. Each postcard is carefully crafted with attention to detail, ensuring that you receive a high-quality product that you will cherish for years to come.
+			</p>
+		</aside>
 
-	
+		<section id="center" class="panel maintenance">
+			<div class="maintenance-inner">
+				<h2>Sorry — We'll be back soon</h2>
+				<p>We're currently performing website maintenance. Please check back shortly.</p>
+			</div>
+		</section>
+
+		<aside id="right" class="panel">
+			<h2>Contact Us</h2>
+			<p>
+				Email: <a href="mailto:kate@postcardmemory.com">kate@postcardmemory.com</a><br>
+				Phone: (555) 555-5555
+			</p>
+		</aside>
+	</main>
 
 </div>
 </body>
