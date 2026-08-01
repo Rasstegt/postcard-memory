@@ -145,9 +145,18 @@ body {
 
 .feature-copy h2 {
 	font-family: 'Playfair Display', serif;
-	font-size: clamp(2.2rem, 3.6vw, 3.2rem);
-	line-height: 1.03;
-	margin: 0 0 18px;
+	font-size: clamp(2rem, 3.2vw, 2.8rem);
+	line-height: 1.02;
+	margin: 0;
+	color: #1e1e2f;
+}
+
+/* Make the feature heading and paragraph visually one block */
+.feature-copy p {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(2rem, 3.2vw, 2.8rem);
+	line-height: 1.02;
+	margin: 0.25rem 0 0 0;
 	color: #1e1e2f;
 }
 
