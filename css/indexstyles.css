@@ -131,9 +131,15 @@ body {
 	grid-template-columns: repeat(6, minmax(0, 1fr));
 	gap: 18px;
 	align-items: center;
-	text-align: center;
-	font-size: 0.85rem;
-	color: #6a6a85;
+	justify-items: center;
+	padding: 0 12px;
+}
+
+.partner-logo {
+	max-height: 48px;
+	width: auto;
+	object-fit: contain;
+	filter: saturate(0.95);
 }
 
 .feature {
