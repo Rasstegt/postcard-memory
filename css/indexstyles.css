@@ -48,6 +48,29 @@
 		gap: 18px;
 		margin-top: 18px;
 	}
+.panel {
+	background: #ffffff;
+	border: 3px solid #0b2340;
+	padding: 22px;
+	box-sizing: border-box;
+	min-height: 320px;
+}
+/* Main layout: left column (3/5) and right stacked column (2/5) */
+#main {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	gap: 18px;
+	margin-top: 18px;
+	align-items: start;
+}
+
+#right-wrapper {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	gap: 18px;
+}
+
+#right-top, #right-bottom { min-height: 140px; }
 	.panel {
 		background: #ffffff;
 		border: 3px solid #0b2340;
@@ -64,7 +87,7 @@
 
 	/* Center maintenance panel with GIF background */
 	#center.maintenance {
-		background-image: url('../images/maintenance.gif');
+		background-image: url('../images/wrapper.gif');
 		background-size: cover;
 		background-position: center;
 		position: relative;
@@ -73,6 +96,22 @@
 		align-items: center;
 		justify-content: center;
 	}
+.maintenance-inner {
+	background: rgba(0,0,0,0.45);
+	padding: 24px 32px;
+	text-align: center;
+	border-radius: 4px;
+}
+#right-bottom.maintenance {
+	background-image: url('../images/maintenance.gif');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 	.maintenance-inner {
 		background: rgba(0,0,0,0.45);
 		padding: 24px 32px;
