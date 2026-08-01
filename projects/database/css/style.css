@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    font-family: Cambria;
+    font-size: 18px;
+}
+body {
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+}
+label { 
+    float: left; 
+    width: 10em; 
+    margin-right: 1em; 
+}
+#wrapper {
+    display: grid;
+    grid-gap: 10px;
+    width: 560px;
+    border-radius: 10px;
+    background-color: #CCCCCC;
+    padding: 20px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+.input, input, select {
+    text-align: left;
+    margin: auto 30px;
+    width: 60%; 
+}
+label {
+    width: 40%;
+    text-align: left;
+    margin: auto 0;
+}
+.row {
+    display: flex;
+    grid-auto-columns: auto;
+    margin: auto 0;
+    padding-top: 1%;
+}
+input[type=submit], button {
+    background-color: #FE6F5E;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+}
+input, select {
+    border: 1px solid #ccc;
+    resize: vertical;
+    border-radius: 4px;
+}
+input[type=submit]:hover, button:hover {
+    background-color: #FA8072;
+}
+h1 {
+    text-align: center;
+    font-family: Comic Sans MS;
+    font-size: 24px;
+}
+
+#errors {
+    margin: auto;
+    color: white;
+}
+#heading {
+    margin: 0 auto;
+}
+table{
+        border-collapse: collapse;
+    }
+    td,th{
+        padding: 4px;
+        border: 1px black solid;
+    }
+    .formData {
+        width: 700px;
+        margin: 5% auto;
+        display: grid;
+        grid-gap: 10px;
+        width: auto;
+        border-radius: 5px;
+        background-image: url(../images);
+        background-color: #f2f2f2;
+        opacity: 0.9;
+        border: 1px solid black;
+        background-size: cover;
+    }
+nav{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+nav ul{
+    background-color: #CCCCCC;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 10px;
+    min-width: 50px;
+}
+
+nav ul li a, nav ul li a:active{
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    background-color: #ABABAB;
+}

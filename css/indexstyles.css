@@ -1,0 +1,46 @@
+	body {
+	background-color: #cde4ef;
+	}
+
+	#wrapper {
+	margin: 1% 0% 25% 25%;
+	background-color: #f00000;
+	width: 50%;
+	background-image: url(../images/wrapper.gif);
+	background-position: center;
+	background-size: cover;
+	border-color: #8f2626;
+	border: 2px solid;
+	}
+
+	#header {
+	padding: 3% 0 2% 10%;
+	height: 100%;
+	}
+
+	#lists {
+	padding: 3% 0% 0% 8%;
+	border-color: #8f2626;
+	border-top: 2px solid;
+	}
+
+	#subtitle {
+	padding-left: 8%;
+	}
+
+	#contactme {
+	margin: 1% 0 0 5%;
+	}
+
+	h1, h2, i {
+	color: #04256d;
+	font-family: Cambria;
+	margin: 0%;} 
+
+	p, h3, a, li {
+	color: #730f06;
+	font-family: Cambria;}
+
+	li {
+		margin-top: 3px;
+	}

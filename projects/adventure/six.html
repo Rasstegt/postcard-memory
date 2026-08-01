@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>Adventure Six</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<style type="text/css">
+		body {
+			background-image: url(images/backgroundsix.gif); /*http://uk.businessinsider.com/game-of-thrones-animated-gifs-2016-6 */
+			background-size: cover;
+			background-position: center;
+			}
+		#wrapper {
+			background-image: url(images/sixground.gif); /* http://thenerdygentlemen.blogspot.com/2015/09/retro-nerd-super-mario-reversible.html*/
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			width: 700px;
+			height: 480px;
+			margin: auto;
+			border: 4px solid #760909;
+		}
+		#home {
+			margin-left: 35%;
+			margin-top: 1%;
+		}
+		#htmlinfo {
+			margin-left: 15%;
+			margin-bottom: 2.5%;	
+			}
+		#media {
+			padding-left: 87%;
+		}
+		#moves {
+			padding-top: 10%;
+		}
+		#prev {
+			margin-left: 5%;
+		}
+		#next {
+			margin-left: 8%;
+			margin-right: 5%;
+		}
+		#random {
+			margin-left: 6.5%;
+		}
+		span.moves {
+			display: inline;
+		}
+		span.header {
+			display: inline;
+		}
+	</style>
+
+</head>
+
+<body>
+<div id="wrapper">
+	
+	<div id="header">
+		<span class="header">	
+		<a href="index.html" target="_blank"> <img id="home" src="images/homesix.gif" style="width:200px; height:100px; 
+			border-radius: 20px;"></a>	<!-- https://giphy.com/gifs/computer-home-text-4WOs6Af0nOOeQ -->
+			
+		<a href="https://stackoverflow.com/questions/22604532/how-to-add-audio-to-a-html-image" target="_blank"><img id="htmlinfo" src="images/htmlinfosix.gif" style="width:140px; height:80px; border-radius: 20px"></a> <!-- https://giphy.com/gifs/screen-monitor-closeup-26tn33aiTi1jkl6H6 -->
+	</span>
+	</div>
+
+	<div id="media">
+		<h1 class="animated infinite heartBeat delay-1s">
+			<audio id="audio_play">
+    			<source src="media/six.mp3" type="audio/mpeg">	
+			</audio>
+				<img src="images/music.gif" style="width:80px; height:60px; border-radius: 20px;" onClick="document.getElementById('audio_play').play(); return false;">
+		</h1> <!-- https://giphy.com/gifs/day-na-gon-1RxlWYJ5hMYbS -->
+	</div>
+
+	<div id="moves">
+		<span class="moves">
+		<a href="five.html" target="_blank"> <img id="prev" src="images/gobacksix.gif" style="width:160px; height:90px; border-radius: 90px;"> </a> <!-- https://commons.wikimedia.org/wiki/File:Megalosaurus_dinosaur.png -->
+
+		<a href="https://theuselessweb.com/" target="_blank"><img id="random" src="images/randomsix.gif" alt="random" style="width:200px; height: 100px; border-radius: 50px;"></a> <!--https://giphy.com/gifs/blue-sea-l41lRBJxofX8tsI8M -->
+	
+		<a href="seven.html" target="_blank"> <img id="next" src="images/gonextsix.gif" style="width:160px; height:90px; border-radius: 90px;"></a> <!-- https://giphy.com/gifs/ufc-ufc217-james-vick-l2QE9DnrGooBbU4vu -->
+		</span>
+		</div>
+</div>
+</body>
+</html>

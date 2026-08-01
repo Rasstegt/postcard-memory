@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style> 
+      #quiz {
+        margin: auto;
+        width: 50%;
+        padding: 30px;
+        border: 1px solid #cccccc;
+        font-family: 'Lato', sans-serif;
+      }
+      #quiz p {
+        font-size: 20px;
+      }
+      #quiz h2 {    
+        font-size: 20px;
+      }
+      .question ul {
+        list-style: none;
+        padding: 0;
+      }
+      .question ul .radio {
+        background-color: #f5f5dc;
+        padding: 5px 10px;
+      }
+      .question ul .radio input, .question ul .radio label {
+        cursor: pointer;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: #FF5722;
+        border: none;
+        color: #ffffff;
+        width: 100px;
+        margin-right: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      #ts, #score, #total {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+      #warning {
+        color: #f10000;
+        float: right;
+      }
+
+    </style>
+
+</head>
+<body>
+  <main>
+    <div id="quiz">
+      
+  <script>
+
+      var quiz = [{
+        type:1,
+        question: "What is the result of (30+20)?",
+        choices: ["20", "30", "50", "60"],
+        correctAnswer: "50",
+        answer: null
+      }, {
+        type:1,
+        question: "The result of (5*20) is 100?",
+        choices: ["True", "False"],
+        correctAnswer: "True",
+        answer: null
+      }, {
+        type:1,
+        question: "What is the result of (5*20)?",
+        choices: ["100", "25", "50", "200"],
+        correctAnswer: "100",
+        answer: null
+      }, {
+        type:1,
+        question: "What is the result of (20-10)?",
+        choices: ["5", "10", "30", "20"],
+        correctAnswer: "10",
+        answer: null
+      },{
+        type:2,
+        question: "What is the name of this planet?",
+        correctAnswer: "EARTH",
+        answer: null
+      }, {
+        type:1,
+        question: "What is the result of (-25+5)?",
+        choices: ["30", "20", "-30", "-20"],
+        correctAnswer: "-20",
+        answer: null
+      }, {
+        type:1,
+        question: "What is the result of (10/2)?",
+        choices: ["5", "10", "30", "20"],
+        correctAnswer: "5",
+        answer: null
+      }];
+
+      var score = 0;
+
+      function render_questions(){
+      var myQuestion = '';
+      for(let i = 0; i < quiz.length; i++){
+
+      myQuestion += `<div class="question" id="get${i}">
+              <h2>${quiz[i].question}</h2>`
+
+            if(quiz[i].type == 1){
+              myQuestion += generate_choices(quiz[i].choices, i);
+
+            } else {
+              myQuestion += 
+                  `<ul>
+                    <input type='text' id='input${i}' name='input${i}'>
+                  </ul>`
+            }
+        
+                if (i >= 1) {
+        myQuestion += `
+          <button onclick="previous_question(${i-1});" id="get${i-1}">Previous</button>
+          <button onclick="process_question(${i});" id="get${i}">Next</button> 
+            </div>`
+          } else {
+        myQuestion += `
+                <button onclick="process_question(${i});" id="get${i}">Next</button> </div>`
+          }
+          ;
+
+    }
+        document.write(myQuestion);
+            
+        for(let i = 1; i < quiz.length; i++ ) {
+        document.getElementById(`get${i}`).style.display = 'none';
+
+        if (i == quiz.length)
+        document.getElementById('total') = 'Your final score is' + score;
+        }
+
+      }
+
+
+      function generate_choices(num, j){
+        var choice = '';
+        for (var i = 0; i < num.length; i++) {
+        choice += `<input type="radio" value="${num[i]}" 
+        name="input${j}" id="input${j}"> ${num[i]} <br>`;       
+        }
+        return choice;
+      }
+
+
+function validation(num) {
+      var x = quiz[num].correctAnswer;
+      var checked_radio = -1;
+      var user ='';
+
+      if (quiz[num].type == 1) {
+
+        user = document.getElementsByName(`input${num}`);
+        
+        if (checked_radio == -1) 
+        document.getElementById('warning').innerHTML = 'Answer the question before you proceed.';
+      
+        for(var i = 0; i < user.length; i++){ // for loop for checkboxes
+            if(user[i].checked == 1){
+            checked_radio = i;
+            document.getElementById('warning').innerHTML = '';
+            break;
+            } // end if
+        } // end for
+
+              if (x == user[checked_radio].value) { score++;  }
+              else { score += 0;  }
+
+      } else {                      // else if type is 2
+
+          user = document.getElementById(`input${num}`).value;
+          if (user == '') {
+          document.getElementById('warning').innerHTML = 'Answer the question before you proceed.';
+
+          previous_question(num);
+
+          } else {
+
+              if (x == user.toUpperCase()) {  score++;  }
+              else { score += 0;  
+                document.getElementById('warning').innerHTML = '';
+              }            
+            }
+      
+      }
+      } 
+
+
+
+      function process_question(num){
+      validation(num);
+
+      document.getElementById("score").innerHTML = score;
+      document.getElementById(`get${num}`).style.display = 'none';
+      document.getElementById(`get${(num + 1)}`).style.display = 'block';
+
+      }
+
+      function previous_question(num) {
+      validation(num + 1);
+
+      document.getElementById("score").innerHTML = score;
+      document.getElementById(`get${(num + 1)}`).style.display = 'none';
+      document.getElementById(`get${num}`).style.display = 'block';
+      }
+
+      render_questions();
+      
+    </script>
+    
+    <p id="total">Total Score: <span id="score">Not attempted yet</span></p>
+    <div id ="warning"></div>
+
+</div>
+</main>
+</body>
+</html>
